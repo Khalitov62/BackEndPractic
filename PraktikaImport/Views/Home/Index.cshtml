@@ -1,0 +1,23 @@
+﻿@using PraktikaImport.Models;
+@{ 
+    ViewBag.Title = "index";
+    List<Product> product = ViewBag.Products;
+    //List<Product> product1 = ViewBag.Computers;
+    //List<Product> product2 = ViewBag.Computers;
+}
+
+
+<ul class="d-flex ">
+    @foreach (Product prod in Model)
+    {
+        
+                <div class="card ms-5" style="width: 18rem;">
+                    <img src="~/image/@prod.Image" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">@prod.Name</h5>
+                        <p class="card-text">@prod.Info</p>
+                        <a href="#" class="btn btn-primary">@prod.Price</a>
+                    </div>
+                </div>
+    }
+</ul>
